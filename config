@@ -496,6 +496,10 @@ bar {
   }
 }
 
+# Send RT signal to i3xrocks on Caps_lock or Num_Lock keypress for updating key-indicator
+bindsym Caps_Lock exec pkill -SIGRTMIN+1 i3xrocks
+bindsym Num_Lock exec pkill -SIGRTMIN+1 i3xrocks
+
 ###############################################################################
 # External programs launched with i3
 ###############################################################################
