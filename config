@@ -246,6 +246,18 @@ floating_modifier $mod
 set_from_resource $i3-wm.hide.edge.borders i3-wm.hide.edge.borders smart
 hide_edge_borders $i3-wm.hide.edge.borders
 
+# enable the use of workspace back and forth movement
+set_from_resource $i3-wm.workspace.auto.back.and.forth i3-wm.workspace.auto.back.and.forth no
+workspace_auto_back_and_forth $i3-wm.workspace.auto.back.and.forth
+
+# delay to reset urgency hint (0 is immediately clear on focus)
+set_from_resource $i3-wm.force.display.urgency.hint i3-wm.force.display.urgency.hint 500 ms
+force_display_urgency_hint $i3-wm.force.display.urgency.hint
+
+# mark a window as urgent, but don't allow to steal focus
+set_from_resource $i3-wm.focus.on.window.activation i3-wm.focus.on.window.activation smart
+focus_on_window_activation $i3-wm.focus.on.window.activation
+
 ###############################################################################
 # Session Management
 ###############################################################################
